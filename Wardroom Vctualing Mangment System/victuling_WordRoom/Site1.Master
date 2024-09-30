@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="victuling_WordRoom.Site1" %>
+
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div class="page">
+        <div class="header">
+            <div class="title">
+            </div>
+            <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/image/1.jpg" Width="1244px" />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Home"/>
+                        <asp:MenuItem Text="Log Out" Value="Log Out"></asp:MenuItem>
+                        <asp:MenuItem Text="About"/>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <telerik:RadScriptManager ID="RadScriptManager1" Runat="server">
+                </telerik:RadScriptManager>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+            <table style="width:100%;">
+                <tr>
+                    <td class="style1">
+                        <strong style="text-align: center">Copyrights @ Sri Lanka Navy 2019 | Designed 
+                        and maintained by Directorate of Naval Information Technology</strong></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

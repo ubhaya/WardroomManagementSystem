@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="VICTULING_DLL.Account.LoginAccess">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAYAAAAAQEAASAAAQAAAAQAAgAAAAA=</HashCode>
+      <FileName>Account\LoginAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.AddNewItems.Class1">
+    <Position X="9.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>wn48SwMTo0XY8u9D8DlJQQztl8mle17eIZBuHAi738Q=</HashCode>
+      <FileName>AddNewItems\Class1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.MealAttendanceClass">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAgAAAAAAAAAAAAhAAQAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.OfficerstoSend">
+    <Position X="2.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.Officer">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAIAAgAAAAAAAAABAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.ReasonType">
+    <Position X="4.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.GroupMenuType">
+    <Position X="5.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.Wardroom">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VICTULING_DLL.MobileStatus.DataTableExtension">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>MobileStatus\MealAttendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

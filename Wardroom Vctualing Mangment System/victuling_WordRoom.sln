@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "victuling_WordRoom", "victuling_WordRoom\victuling_WordRoom.csproj", "{A8F61A40-2D8E-4785-8CAF-37B8F7CE79A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VICTULING_DLL", "VICTULING_DLL\VICTULING_DLL.csproj", "{F21D8438-D418-4CEB-9D7A-2FD19A0B2369}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8F61A40-2D8E-4785-8CAF-37B8F7CE79A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F61A40-2D8E-4785-8CAF-37B8F7CE79A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F61A40-2D8E-4785-8CAF-37B8F7CE79A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F61A40-2D8E-4785-8CAF-37B8F7CE79A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F21D8438-D418-4CEB-9D7A-2FD19A0B2369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F21D8438-D418-4CEB-9D7A-2FD19A0B2369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F21D8438-D418-4CEB-9D7A-2FD19A0B2369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F21D8438-D418-4CEB-9D7A-2FD19A0B2369}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

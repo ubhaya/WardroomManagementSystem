@@ -1,0 +1,294 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="victuling_WordRoom.SiteMaster" %>
+
+<%@ Register Assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304"
+    Namespace="CrystalDecisions.Web" TagPrefix="CR" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <script src="Scripts/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.4.1.min.js" type="text/javascript"></script>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            text-align: center;
+            font-size: small;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+            </div>
+            <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/image/1.jpg" Width="1244px" />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
+                    Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home"></asp:MenuItem>
+                        <asp:MenuItem Text="Stock " Value="Stock">
+                            <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="~/AddNewItems.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Add309PriceList.aspx" Text="On Charge 309 Price List"
+                                Value="On Charge 309 Price List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/View309PriceList.aspx" Text="View 309 Price List" Value="View 309 Price List">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Stock On Charge" Value="Stock On Charge" NavigateUrl="~/ItemOnCharge.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="View On Charge Bill" Value="View On Charge" NavigateUrl="~/viewOnChargedItems.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CashPurchaseItemListByDuration.aspx" Text="View Purchased All Items by Duration "
+                                Value="View Purchased All Items by Duration "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewAvailableItemWithUnitPrice.aspx" Text="View Available Item List with Price"
+                                Value="View Available Item List with Price"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewCurrentStockItem.aspx" Text="View Available Item List"
+                                Value="View Available Item List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewFullStock.aspx" Text="View Full Stock" Value="View Full Stock">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="View Stock Item wise" Value="View Stock" NavigateUrl="~/ViewStock.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewPurchasedItemByPeriod.aspx" Text="View Purchased Item by Duration "
+                                Value="View Purchased Item by Duration "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ItemSummarySheet.aspx" Text="View Sale Item List by Duration"
+                                Value="View Sale Item List by Duration"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ItemSummerySheetByDate.aspx" Text="View Sale Item Summary"
+                                Value="View Sale Item Summary"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ItemSummarySale.aspx" Text="View Sale Item Summary with Price"
+                                Value="View Sale Item Summary with Price"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/summaryOfIndividualCost.aspx" Text="View Individual Sale Summary"
+                                Value="View Individual Sale Summary"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/GetMonthlyAllOffRecoveryWithOffNo.aspx" Text="Monthly Summary by Official No."
+                                Value="Monthly Summary by Official No."></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/DailySummaryByOffNo .aspx" Text="Daily Summary by Official No."
+                                Value="Daily Summary by Official No."></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Menu" Value="Menu">
+                            <asp:MenuItem NavigateUrl="~/AddNewMenuItems.aspx" Text="New Menu Item" Value="New Menu Item">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddIngredientsForMenuItem.aspx" Text="Add Ingredients for Menu Items"
+                                Value="Add Ingredients for Menu Items"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/EditIngredients.aspx" Text="Edit Ingredients for Menu Items"
+                                Value="Edit Ingredients for Menu Items"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CreateMenuList.aspx" Text="Create Menu" Value="Create Menu">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MenuAuthorization.aspx" Text="Menu Authorization" Value="Menu Authorization">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ChangeMenuItemsByMM.aspx" Text="Change Menu Items by Mess Manager"
+                                Value="Change Menu Items by Mess Manager"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewAllMenues.aspx" Text="View All Menu" Value="View All Menu">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewManuItemListForCA.aspx" Text="View Menu Item List"
+                                Value="View Menu Item List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewExtraMenuSale.aspx" Text="View Group Menu Sale"
+                                Value="View Group Menu Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/createPartyMenu.aspx" Text="Create Party Menu" Value="Create Party Menu">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewPartyMenu.aspx" Text="View Party Menu" Value="View Party Menu">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/viewAllMenuCount.aspx" Text="Daily Figger List" Value="Daily Figger List">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Bite" Value="New Item">
+                                <asp:MenuItem NavigateUrl="~/viewBiteOrder_MA.aspx" Text="View Bite Order" Value="View Bite Order">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/viewBiteIngredientsList.aspx" Text="View Ingredients for Bite"
+                                    Value="View Ingredients for Bite"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/viewBiteOrder.aspx" Text="Authorized Bite Order" Value="Authorized Bite Order">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewAvailableItemWithUnitPrice.aspx" Text="View Available Item List with Price"
+                                Value="View Available Item List with Price"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Meal Attendance" Value="Meal Attendance">
+                            <asp:MenuItem NavigateUrl="~/MealAttendance.aspx" Text="Menu Meal Attendance" Value="Menu Meal Attendance">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Menu Meal Attendance List" Value="Menu Meal Attendance List"
+                                NavigateUrl="~/GetMenuMarkList.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewMobileMealAttendanceDetails.aspx" Text="Mobile Confermation"
+                                Value="Mobile Confermation"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MealInOutByMA.aspx" Text="Main Menu Meal Attendance - Bulk"
+                                Value="Main Menu Meal Attendance - Other"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/UpdateMealInOut.aspx" Text="Update Main Menu Meal Attendance - Bulk"
+                                Value="Update Main Menu Meal Attendance - Other"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MealAttendanceCustomized.aspx" Text="Customized Meal Attendance "
+                                Value="Customized Meal Attendance "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewExtraItems.aspx" Text="Customized Meal Attendance  List"
+                                Value="Customized Meal Attendance  List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MealAttendanceCivil.aspx" Text="Menu Meal Attendance - Civil "
+                                Value="Menu Meal Attendance - Civil "></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CreateGroupMenuByMA.aspx" Text="Create Group Menu" Value="Create Group Menu">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/GetGroupMenuMarkList.aspx" Text="Group Menu Attendance List"
+                                Value="Group Menu Attendance List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ChangeMenuItemsByMM.aspx" Text="Change Menu Items by Mess Manager"
+                                Value="Change Menu Items by Mess Manager"></asp:MenuItem>
+                            <asp:MenuItem Text="Bite" Value="New Item">
+                                <asp:MenuItem NavigateUrl="~/CreateBiteOrder.aspx" Text="Mark Bite Order" Value="Mark Bite Order">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/viewBiteOrder_MA.aspx" Text="View Bite Oder " Value="View Bite Oder ">
+                                </asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewAllMealAttendanceDetails.aspx" Text="View All Meal Details"
+                                Value="View All Meal Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MealBook.aspx" Text="View Meal Book" Value="View Meal Book">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Menu Sales" Value="Menu Sales">
+                            <asp:MenuItem NavigateUrl="~/MenuSale.aspx" Text="Menu Sale" Value="Menu Sales">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/viewMenuSaleN.aspx" Text="View Menu Sale" Value="View Menu Sale">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/IndividualSaleGroup.aspx" Text="Group Menu Sale" Value="Group Menu Sale">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewGroupMenuItemList.aspx" Text="View Group Menu Sale"
+                                Value="View Group Menu Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CustomizedMenuSale.aspx" Text="Customized Menu Sale"
+                                Value="Customized Menu Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewAllMealAttendanceDetails.aspx" Text="View All Meal Details"
+                                Value="View All Meal Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddExtraForMenu.aspx" Text="Extra Items For Menu Sale"
+                                Value="Extra Items For Menu Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/DailyItemSummarySheet.aspx" Text="Total Sale Item List"
+                                Value="Total Sale Item List"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Individual Sale" Value="Individual Sale">
+                            <asp:MenuItem NavigateUrl="~/IndividualSaleNew.aspx" Text="Individual Personal/Credit Sale"
+                                Value="Individual Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/GroupSale.aspx" Text="Group Sale " Value="Group Sale ">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewIndividualSale.aspx" Text="View Individual Personal Sale - Daily"
+                                Value="View Individual Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViwIndividualMonthlyPrsonalSale.aspx" Text="View Individual Personal Sale - Mothly"
+                                Value="View Individual Personal Sale - Mothly"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/IndividualCreditSale.aspx" Text="View Individual Credit Issue"
+                                Value="View Individual Credit Issue"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Party/Bite/Tea" Value="PartyTea">
+                            <asp:MenuItem NavigateUrl="~/PartySale.aspx" Text="Party Items Sale" Value="Party Items Sale">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddExtraForParty.aspx" Text="Extra Items For Party Sale"
+                                Value="Extra Items For Party Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddAllOfficersPartyAndCommandParty.aspx" Text="All Officers/Command Prty"
+                                Value="All Officers/Command Prty"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/BiteSale.aspx" Text="Bite Sale" Value="Bite Sale"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewPartyDetails.aspx" Text="View Party/Bite Sale" Value="View Party Sale">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Item Depreciation/845/Tea Ration" Value="Item Depreciation/845/Tea Ration"
+                                NavigateUrl="~/DepreciationDeduction.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="View Item Depreciation/845/Tea Ration" Value="View Item Depreciation/845/Tea Ration"
+                                NavigateUrl="~/ViewItemDepreciation845Tea Ration.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Add Monthly Tea Cost" Value="Add Monthly Tea Cost" NavigateUrl="~/AddMonthlyTeaCost.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Tea Mark" Value="Tea Mark" NavigateUrl="~/MarkTea.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Tea Mark List" Value="Tea Mark List" NavigateUrl="~/ViewTeaMarkDetails.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MonthlyTeaMark.aspx" Text="Get Monthly Tea Mark" Value="Get Monthly Tea Mark">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/TeaRetionCalculation.aspx" Text="Get Monthly Tea Ration"
+                                Value="Get Monthly Tea Ration"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Calculation" Value="Calculations">
+                            <asp:MenuItem Text="Delete" Value="Delete">
+                                <asp:MenuItem NavigateUrl="~/MealAttendanceDelete.aspx" Text="Delete Meal Attendance "
+                                    Value="Delete Meal Attendance "></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ViewMenuSale.aspx" Text="Delete Menu Sale Item" Value="Delete Menu Sale Item">
+                                </asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/DeleteGroupSaleItem.aspx" Text="Delete Group Menu Sale Item"
+                                    Value="Delete Group Menu Sale Item"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/viewDeduction.aspx" Text="Delete Depreciation/845/Tea Ration"
+                                    Value="Delete Depreciation/845/Tea Ration"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CalCostForeMeal.aspx" Text="Calculate Cost Per Meal "
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddMenuCost.aspx" Text="Add Cost Per Meal " Value="Add Cost Per Meal ">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddPendingRecovery.aspx" Text="Pending Recovery" Value="Pending Recovery">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Add304List.aspx" Text="Upload 304 List" Value="Upload 304 List">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddBarRecovery.aspx" Text="Upload Bar Recovery" Value="Upload Bar Recovery">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewMonthlyPersonList.aspx" Text="View Monthly Officer List"
+                                Value="View Monthly Officer List"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddFinalCostDetails.aspx" Text="Authorize Cost" Value="Authorize Cost">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/viewMonthlyRecoveryWIthDetails.aspx" Text="View Monthly Individual Cost"
+                                Value="View Monthly Individual Cost"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewMonthlyReport.aspx" Text="Authorize Monthly Recovery"
+                                Value="Authorize Monthly Recovery"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddMessSub.aspx" Text="Upload Mess Substitute" Value="Upload Mess Substitute">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/FinalMonthlyRecoveryReport.aspx" Text="View Final Monthly Recovery"
+                                Value="View Final Monthly Recovery"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Reports.aspx" Text="View Final Reports" Value="View Final Reports">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Cash Book" Value="Cash Book">
+                            <asp:MenuItem NavigateUrl="~/AddCashBookDetails.aspx" Text="Add Cash Book Data" Value="Add Cash Book Data">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewCashBook.aspx" Text="Authorize Cash Book" Value="Authorize Cash Book">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViweFinalCashBook.aspx" Text="View Cash Book" Value="View Cash Book">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/cashSummary.aspx" Text="Cash Summary by Monthly" Value="Cash Summary by Monthly">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Civil/Other Forces" Value="Civil">
+                            <asp:MenuItem NavigateUrl="~/AddCivilDoctorNameList.aspx" Text="Add Civil Persons"
+                                Value="Add Civil Persons"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Cabin Allocation" Value="Cabin Allocation">
+                            <asp:MenuItem NavigateUrl="~/AddCabinAllocation.aspx" Text="Add Cabin Allocation"
+                                Value="Add Cabin Allocation"></asp:MenuItem>
+                            <asp:MenuItem Text="View Cabin Allocation" Value="View Cabin Allocation" NavigateUrl="~/ViewCabinAllocation.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="View " Value="View Individual ">
+                            <asp:MenuItem NavigateUrl="~/ViewIndividualMonthlyRecovery.aspx" Text="View Individual Monthly Recovery"
+                                Value="View Individual Monthly Recovery"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewMenu.aspx" Text="View Menu" Value="View Menu"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Log Out" Value="Log Out" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About">
+                            <asp:MenuItem NavigateUrl="~/UserRegistration.aspx" Text="User Registration" Value="User Registration">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ResetPassword.aspx" Text="Reset Password" Value="Reset Password">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+                </telerik:RadScriptManager>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+            <h3 class="style1">
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <strong>Copyrights @ Sri Lanka Navy 2019 | Designed and maintained by Directorate of
+                                Naval Information Technology</strong>
+                        </td>
+                    </tr>
+                </table>
+            </h3>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+</body>
+</html>

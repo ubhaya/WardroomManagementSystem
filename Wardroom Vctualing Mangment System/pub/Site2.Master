@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="victuling_WordRoom.Site2" %>
+<%@ Register assembly="Telerik.Web.UI" namespace="Telerik.Web.UI" tagprefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <div class="page">
+        <div class="header">
+            <div class="title">
+            </div>
+            <div class="loginDisplay">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/image/05.jpg" Width="936px" />
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem Text="Home"/>
+                        <asp:MenuItem Text="Menu " Value="Menu ">
+                            <asp:MenuItem NavigateUrl="~/AddNewMenuItems.aspx" Text="New Menu Item" 
+                                Value="New Menu Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/CreateMenuList.aspx" Text="Create Menu" 
+                                Value="Create Menu"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MenuAuthorization.aspx" Text="Menu Authorization" 
+                                Value="Menu Authorization"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Meal Attendance" Value="Meal Attendance">
+                            <asp:MenuItem NavigateUrl="~/MealAttendance.aspx" Text="Menu Meal Attendance" 
+                                Value="Menu Meal Attendance"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MealAttendanceCustomized.aspx" 
+                                Text="Customized Meal Attendance " Value="Customized Meal Attendance ">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Meal Attendance List" Value="Meal Attendance List" 
+                                NavigateUrl="~/GetMenuMarkList.aspx">
+                            </asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="CA" Value="CA">
+                            <asp:MenuItem NavigateUrl="~/itemListByCA.aspx" Text="Item List by CA" 
+                                Value="Item List by CA"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ViewCAItemList.aspx" Text="View Item List - CA" 
+                                Value="View Item List - CA"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Log Out" Value="Log Out" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/About.aspx" Text="About">
+                            <asp:MenuItem NavigateUrl="~/UserRegistration.aspx" Text="User Registration" 
+                                Value="User Registration"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ResetPassword.aspx" Text="Reset Password" 
+                                Value="Reset Password"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <telerik:RadScriptManager ID="RadScriptManager1" Runat="server">
+                </telerik:RadScriptManager>
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+</body>
+</html>
